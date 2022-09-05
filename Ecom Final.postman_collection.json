@@ -1,0 +1,777 @@
+{
+	"info": {
+		"_postman_id": "91ca93a5-f971-442e-9d45-3937f417f761",
+		"name": "Ecom Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23069998"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products/630dffac952dd0f5dc99c6e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"630dffac952dd0f5dc99c6e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products/category/automotor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"category",
+								"automotor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token-auth",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products/630d1e732c6c95462bbd4c1f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"630d1e732c6c95462bbd4c1f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"name\":\"producto3\",\r\n    \"description\":\"descripcion producto3\",\r\n    \"code\":\"003\",\r\n    \"photo\":\"producto3.png\",\r\n    \"price\":200,\r\n    \"stock\":100,\r\n    \"category\":\"automotor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"630d21ca2a6bfc2f1eb3edd7\",\r\n    \"content\":{\r\n    \"name\":\"producto1 modif\",\r\n    \"description\":\"descripcion producto1 modif\",\r\n    \"code\":\"001\",\r\n    \"photo\":\"producto1_modif.png\",\r\n    \"price\":201,\r\n    \"stock\":100,\r\n    \"category\":\"electronica varios\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carts",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carts/{{cart_to_find}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts",
+								"{{cart_to_find}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductsByCart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carts/{{cart_to_find}}/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts",
+								"{{cart_to_find}}",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rubenhg@gmail.com\",\r\n    \"timestamp\":1,\r\n    \"products\":[],\r\n    \"deliveryAddress\":\"Cordoba 915\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"630df8fac3a4c99bc22a0fd7\",\r\n    \"content\":{\r\n               \"products\": [\r\n        {\r\n            \"id\": \"630d21ca2a6bfc2f1eb3edd7\",\r\n            \"quantity\": 2,\r\n            \"price\":300\r\n        },\r\n        {\r\n            \"id\": \"630d2dbd4bc421a8ca073e9f\",\r\n            \"quantity\": 3,\r\n            \"price\":350\r\n        }]\r\n              }    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carts/630d2e75ef258fffb6c16894",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts",
+								"630d2e75ef258fffb6c16894"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carts/630df8fac3a4c99bc22a0fd7/product/630dffac952dd0f5dc99c6e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts",
+								"630df8fac3a4c99bc22a0fd7",
+								"product",
+								"630dffac952dd0f5dc99c6e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"630dffac952dd0f5dc99c6e6\",\r\n    \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carts/{{cart_to_find}}/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts",
+								"{{cart_to_find}}",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/orders/{{order_to_find}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"{{order_to_find}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByEmail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/orders/email/rubenhg@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"email",
+								"rubenhg@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timestamp\": 0,\r\n    \"products\": [\r\n        {\r\n            \"id\": \"630d21ca2a6bfc2f1eb3edd7\",\r\n            \"quantity\": 1,\r\n            \"price\": 350\r\n        },\r\n        {\r\n            \"id\": \"630d2dbd4bc421a8ca073e9f\",\r\n            \"quantity\": 2,\r\n            \"price\": 50\r\n        }\r\n    ],\r\n    \"state\": \"generada\",\r\n    \"email\": \"rubenhg@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateFromCart",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/cart/{{cart_to_finish}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"cart",
+								"{{cart_to_finish}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"email\":\"rubenhg@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"email\":\"rubenhg@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "nuevo mensaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rubenhg@gmail.com\",\r\n    \"type\": \"sistema\",\r\n    \"content\": \"respuesta desde sistema\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/chat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/chat/{{Email_to_find}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat",
+								"{{Email_to_find}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "info",
+			"item": [
+				{
+					"name": "getInfo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{token-a}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cart_to_finish",
+			"value": "630df8fac3a4c99bc22a0fd7"
+		},
+		{
+			"key": "order_to_find",
+			"value": "6310c5d0a1750aabf548fe18"
+		},
+		{
+			"key": "cart_to_find",
+			"value": "631664b0c9068b39ca5b2e90",
+			"type": "string"
+		},
+		{
+			"key": "Email_to_find",
+			"value": "rubenhg@gmail.com"
+		},
+		{
+			"key": "token-a",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1YmVuaGdAZ21haWwuY29tIiwiaWQiOiI2MzE2NWVhYmUxMTBiNTllMWM5YTRmNjkiLCJpYXQiOjE2NjI0MTQ4NzR9.BitEsctVYWlMtzUqdm748rYuaZOLu0l2YkISzrUW08o",
+			"type": "string"
+		}
+	]
+}
