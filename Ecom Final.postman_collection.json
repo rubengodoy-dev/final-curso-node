@@ -21,12 +21,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/products",
-							"protocol": "http",
+							"raw": "{{URL}}/products",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"products"
 							]
@@ -46,15 +44,13 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/products/630dffac952dd0f5dc99c6e6",
-							"protocol": "http",
+							"raw": "{{URL}}/products/{{product_to_find}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"products",
-								"630dffac952dd0f5dc99c6e6"
+								"{{product_to_find}}"
 							]
 						}
 					},
@@ -72,16 +68,14 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/products/category/automotor",
-							"protocol": "http",
+							"raw": "{{URL}}/products/category/{{category_to_find}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"products",
 								"category",
-								"automotor"
+								"{{category_to_find}}"
 							]
 						}
 					},
@@ -93,21 +87,19 @@
 						"method": "DELETE",
 						"header": [
 							{
-								"key": "token-auth",
+								"key": "auth-token",
 								"value": "{{token-a}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/products/630d1e732c6c95462bbd4c1f",
-							"protocol": "http",
+							"raw": "{{URL}}/products/{{product_to_delete}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"products",
-								"630d1e732c6c95462bbd4c1f"
+								"{{product_to_delete}}"
 							]
 						}
 					},
@@ -126,7 +118,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{  \r\n    \"name\":\"producto3\",\r\n    \"description\":\"descripcion producto3\",\r\n    \"code\":\"003\",\r\n    \"photo\":\"producto3.png\",\r\n    \"price\":200,\r\n    \"stock\":100,\r\n    \"category\":\"automotor\"\r\n}",
+							"raw": "{  \r\n    \"name\":\"producto9\",\r\n    \"description\":\"descripcion producto9\",\r\n    \"code\":\"009\",\r\n    \"photo\":\"producto9.png\",\r\n    \"price\":200,\r\n    \"stock\":100,\r\n    \"category\":\"automotor\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -134,12 +126,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/products",
-							"protocol": "http",
+							"raw": "{{URL}}/products",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"products"
 							]
@@ -160,7 +150,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":\"630d21ca2a6bfc2f1eb3edd7\",\r\n    \"content\":{\r\n    \"name\":\"producto1 modif\",\r\n    \"description\":\"descripcion producto1 modif\",\r\n    \"code\":\"001\",\r\n    \"photo\":\"producto1_modif.png\",\r\n    \"price\":201,\r\n    \"stock\":100,\r\n    \"category\":\"electronica varios\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"id\":\"6316a0e26dc8cacf081c11b8\",\r\n    \"content\":{\r\n    \"name\":\"producto1 modif\",\r\n    \"description\":\"descripcion producto1 modif\",\r\n    \"code\":\"009\",\r\n    \"photo\":\"producto1_modif.png\",\r\n    \"price\":201,\r\n    \"stock\":100,\r\n    \"category\":\"electronica varios\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -168,12 +158,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/products",
-							"protocol": "http",
+							"raw": "{{URL}}/products",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"products"
 							]
@@ -198,12 +186,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/carts",
-							"protocol": "http",
+							"raw": "{{URL}}/carts",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts"
 							]
@@ -223,12 +209,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/carts/{{cart_to_find}}",
-							"protocol": "http",
+							"raw": "{{URL}}/carts/{{cart_to_find}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts",
 								"{{cart_to_find}}"
@@ -249,12 +233,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/carts/{{cart_to_find}}/products",
-							"protocol": "http",
+							"raw": "{{URL}}/carts/{{cart_to_find}}/products",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts",
 								"{{cart_to_find}}",
@@ -277,7 +259,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"rubenhg@gmail.com\",\r\n    \"timestamp\":1,\r\n    \"products\":[],\r\n    \"deliveryAddress\":\"Cordoba 915\"\r\n}",
+							"raw": "{\r\n    \"email\":\"rubenhg@gmail.com\",\r\n    \"date\":\"\",\r\n    \"products\":[],\r\n    \"deliveryAddress\":\"Cordoba 915\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -285,12 +267,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/carts",
-							"protocol": "http",
+							"raw": "{{URL}}/carts",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts"
 							]
@@ -319,12 +299,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/carts",
-							"protocol": "http",
+							"raw": "{{URL}}/carts",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts"
 							]
@@ -344,12 +322,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/carts/630d2e75ef258fffb6c16894",
-							"protocol": "http",
+							"raw": "{{URL}}/carts/630d2e75ef258fffb6c16894",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts",
 								"630d2e75ef258fffb6c16894"
@@ -370,17 +346,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/carts/630df8fac3a4c99bc22a0fd7/product/630dffac952dd0f5dc99c6e6",
-							"protocol": "http",
+							"raw": "{{URL}}/carts/{{cart_to_find}}/product/{{product_to_delete_from_cart}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts",
-								"630df8fac3a4c99bc22a0fd7",
+								"{{cart_to_find}}",
 								"product",
-								"630dffac952dd0f5dc99c6e6"
+								"{{product_to_delete_from_cart}}"
 							]
 						}
 					},
@@ -407,12 +381,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/carts/{{cart_to_find}}/addProduct",
-							"protocol": "http",
+							"raw": "{{URL}}/carts/{{cart_to_find}}/addProduct",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"carts",
 								"{{cart_to_find}}",
@@ -439,12 +411,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/orders",
-							"protocol": "http",
+							"raw": "{{URL}}/orders",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"orders"
 							]
@@ -464,12 +434,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/orders/{{order_to_find}}",
-							"protocol": "http",
+							"raw": "{{URL}}/orders/{{order_to_find}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"orders",
 								"{{order_to_find}}"
@@ -490,12 +458,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/orders/email/rubenhg@gmail.com",
-							"protocol": "http",
+							"raw": "{{URL}}/orders/email/rubenhg@gmail.com",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"orders",
 								"email",
@@ -521,7 +487,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"timestamp\": 0,\r\n    \"products\": [\r\n        {\r\n            \"id\": \"630d21ca2a6bfc2f1eb3edd7\",\r\n            \"quantity\": 1,\r\n            \"price\": 350\r\n        },\r\n        {\r\n            \"id\": \"630d2dbd4bc421a8ca073e9f\",\r\n            \"quantity\": 2,\r\n            \"price\": 50\r\n        }\r\n    ],\r\n    \"state\": \"generada\",\r\n    \"email\": \"rubenhg@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"date\": \"\",\r\n    \"products\": [\r\n        {\r\n            \"id\": \"630d21ca2a6bfc2f1eb3edd7\",\r\n            \"quantity\": 1,\r\n            \"price\": 350\r\n        },\r\n        {\r\n            \"id\": \"630d2dbd4bc421a8ca073e9f\",\r\n            \"quantity\": 2,\r\n            \"price\": 50\r\n        }\r\n    ],\r\n    \"state\": \"generada\",\r\n    \"email\": \"rubenhg@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -529,12 +495,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/orders",
-							"protocol": "http",
+							"raw": "{{URL}}/orders",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"orders"
 							]
@@ -566,12 +530,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/orders/cart/{{cart_to_finish}}",
-							"protocol": "http",
+							"raw": "{{URL}}/orders/cart/{{cart_to_finish}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"orders",
 								"cart",
@@ -593,7 +555,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \r\n    \"email\":\"rubenhg@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"raw": "{    \r\n    \"email\":\"rubenhg@coder.com\",\r\n    \"password\": \"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -601,12 +563,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/user/register",
-							"protocol": "http",
+							"raw": "{{URL}}/user/register",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"user",
 								"register"
@@ -630,12 +590,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/user/login",
-							"protocol": "http",
+							"raw": "{{URL}}/user/login",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"user",
 								"login"
@@ -664,12 +622,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/chat",
-							"protocol": "http",
+							"raw": "{{URL}}/chat",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"chat"
 							]
@@ -683,12 +639,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/chat/{{Email_to_find}}",
-							"protocol": "http",
+							"raw": "{{URL}}/chat/{{Email_to_find}}",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"chat",
 								"{{Email_to_find}}"
@@ -714,12 +668,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/info",
-							"protocol": "http",
+							"raw": "{{URL}}/info",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3000",
 							"path": [
 								"info"
 							]
@@ -772,6 +724,22 @@
 			"key": "token-a",
 			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1YmVuaGdAZ21haWwuY29tIiwiaWQiOiI2MzE2NWVhYmUxMTBiNTllMWM5YTRmNjkiLCJpYXQiOjE2NjI0MTQ4NzR9.BitEsctVYWlMtzUqdm748rYuaZOLu0l2YkISzrUW08o",
 			"type": "string"
+		},
+		{
+			"key": "product_to_find",
+			"value": "630dffac952dd0f5dc99c6e6"
+		},
+		{
+			"key": "category_to_find",
+			"value": "automotor"
+		},
+		{
+			"key": "product_to_delete",
+			"value": "630d1e732c6c95462bbd4c1f"
+		},
+		{
+			"key": "product_to_delete_from_cart",
+			"value": "630dffac952dd0f5dc99c6e6"
 		}
 	]
 }
