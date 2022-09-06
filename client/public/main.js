@@ -1,5 +1,7 @@
-let URL = 'http://localhost:3000'
-let socket = io.connect(URL, {
+//let URL_SOCKET = 'http://localhost:3000'  //DEV
+let URL_SOCKET = 'https://rhg-final-coder.herokuapp.com' //PROD
+
+let socket = io.connect(URL_SOCKET, {
   'forceNew': true
 });
 let roomMail = prompt("Ingrese el mail para el canal de chat")
@@ -26,7 +28,7 @@ function addMessage(e) {
     content: document.getElementById('texto').value
   };
 
-  postData(URL+'/chat', message)
+  postData(URL_SOCKET+'/chat', message)
     .then(data => {
       console.log(data)
     });
